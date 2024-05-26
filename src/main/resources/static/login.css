@@ -1,0 +1,27 @@
+
+body, html {
+    height: 100%;
+    margin: 0;
+    width: 100%;
+}
+
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+        height: 100%
+}
+
+.outer-box {
+    border: 1px solid #ced4da;
+    padding: 20px;
+    width: 425px; /* Adjust width as needed */
+ border-radius: 15px;
+    background-color: #f8f9fa; /* Adjust background color as needed */
+}
+
+.inner-box {
+
+    margin-bottom: 15px;
+}

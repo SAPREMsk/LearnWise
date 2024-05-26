@@ -1,0 +1,43 @@
+body, html {
+    height: 100%;
+    margin: 0;
+}
+h1{
+
+    color: white;
+    text-align: center;
+    padding-top: 95px; 
+}
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50vh; /* Ensure the container takes up the full height of the viewport */
+}
+.outer-box .d-grid {
+    text-align: center; /* Center the buttons */
+    border: 5px solid rgb(221, 190, 190);
+    padding: 20px;
+    border-radius: 15px;
+}
+button{
+    border-radius: 15px;  
+}
+button {
+    background-color: #4bb1f5; 
+    border-radius: 15px;
+    color: rgb(255, 255, 255);
+    padding: 16px 32px;
+    border: none;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 22px;
+    margin: 2px 2px;
+    cursor: pointer;
+}
+
+button a{
+    text-decoration: none;
+    color: white;
+}

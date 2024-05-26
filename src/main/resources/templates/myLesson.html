@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html xmlns: th="https://www.thymeleaf.org">
+
+<head>
+    <meta charset="ISO-8859-1">
+    <title>cources</title>
+</head>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #dadfff;
+        text-align: center;
+    }
+
+    .head{
+        margin: 0 100px;
+    }
+    .container {
+        margin: 10px auto;
+        padding: 20px;
+        background-color: #83b1ff;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        width: 80%;
+        max-width: 800px;
+    }
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 20px;
+    }
+
+    th,
+    td {
+        border: 1px solid #231f1f;
+        padding: 8px;
+    }
+
+    th {
+        background-color:  #83b1ff;
+    }
+
+    td {
+        background-color: #def1ff;
+    }
+
+    h1 {
+        margin-bottom: 20px;
+    }
+
+    iframe {
+        width: 100%;
+        height: 315px;
+        margin-bottom: 20px;
+    }
+
+    textarea {
+        width: 100%;
+        height: 100px;
+        padding: 10px;
+        margin-bottom: 10px;
+    }
+
+    input[type="submit"] {
+        background-color: #1e1951;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    input[type="submit"]:hover {
+        background-color: #142585;
+    }
+</style>
+</style>
+
+<body>
+    <h1>Course Details</h1>
+    <div>
+        <div class="head">
+
+            <table border="2">
+                <thead>
+                    <tr>
+                        <th>Lesson ID</th>
+                        <th>Lesson Name</th>
+                        <th>Lesson Topics</th>
+                        <th>Lessons link</th>
+                        <th>Course ID</th>
+                    </tr>
+                </thead>
+        </div>
+        <tbody>
+            <tr>
+                <td th:text="${lesson.lessonId}"></td>
+                <td th:text="${lesson.lessonName}"></td>
+                <td th:text="${lesson.lessontopics}"></td>
+                <td th:text="${lesson.link}">
+                    <li th:each="lesson : ${lessons}">
+                        <a th:href="@{/lesson/{id}}" th:src="${lesson.link}"></a>
+                </td>
+                <td th:text="${lesson.course.courseID}"></td>
+            </tr>
+        </tbody>
+        </table>
+    </div>
+    <br>
+    <br>
+    <div class="container">
+
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/AjkYTJklAa8?si=NbT04wZglF5Y7LBS"
+            title="YouTube video player" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+
+    </div>
+
+    <div class="container">
+        <form action="/addCommment" method="post">
+            <h2>Leave a comment here:</h2>
+            <textarea name="comment"></textarea>
+            <input type="submit" value="Add Comment here">
+        </form>
+
+    </div>
+
+    <div class="container">
+        <h2>Comments:</h2>
+
+    </div>
+
+</body>
+
+</html>

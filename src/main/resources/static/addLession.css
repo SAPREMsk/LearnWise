@@ -1,0 +1,45 @@
+/* style.css */
+body {
+    background-color: cornsilk; /* Light gray background */
+}
+
+h1,h2, p{
+    text-align: center;
+}
+
+.container {
+    border:2px solid rgb(97, 94, 94);
+    max-width: 600px;
+    margin: 50px auto ;
+    padding: 20px;
+    background-color: antiquewhite;
+    border-radius: 10px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    font-weight: bold;
+}
+
+input[type="text"] {
+    width: 96%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    background-color: basic;
+    border-radius: 5px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #1c0505;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+button:hover {
+    background-color: #0d1827;
+}
